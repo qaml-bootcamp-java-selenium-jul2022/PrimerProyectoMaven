@@ -39,4 +39,18 @@ public class EjerciciosStrings {
         return constructorDeCadena.toString();
     }
 
+    public boolean metodoContieneCadena(String cadena1, String cadena2){
+        //boolean resultado = false;
+
+        //resultado = (cadena1.startsWith(cadena2)|| cadena1.endsWith(cadena2));
+
+
+        return ((cadena1.startsWith(cadena2) || cadena1.endsWith(cadena2))?
+                true
+                :
+                false);
+    }
+
+
+
 }
