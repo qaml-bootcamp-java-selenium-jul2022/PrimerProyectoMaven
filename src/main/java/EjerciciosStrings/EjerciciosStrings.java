@@ -31,6 +31,18 @@ public class EjerciciosStrings {
         return  caracterEnIndice;
     }
 
+    public boolean metodoContieneCadena(String cadena1, String cadena2){
+        //boolean resultado = false;
+
+        //resultado = (cadena1.startsWith(cadena2)|| cadena1.endsWith(cadena2));
+
+
+        return ((cadena1.startsWith(cadena2) || cadena1.endsWith(cadena2))?
+                true
+                :
+                false);
+    }
+
     public String insertarCharEnCadena (String cadena, char caracterAInsertar, int posicion) {
         System.out.println("El tamaño de la cadena ANTES de la insercion: " + cadena.length());
         StringBuilder constructorDeCadena = new StringBuilder(cadena);
