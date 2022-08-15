@@ -36,4 +36,67 @@ class EjerciciosStringsTest {
 
         Assertions.assertEquals(expectedResult, actualResult);
     }
+
+    @Test
+    void posicionDeDeterminadoCaracterNegativo(){
+        int expectedResult = 2;
+        char determinadoCaracter = 'a';
+        int actualResult = test.posicionDeDeterminadoCaracter(determinadoCaracter, cadenaPrueba);
+
+        Assertions.assertNotEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    void reemplazarCaracterEnDeterminadoIndiceDeLaCadena(){
+        char expectedResult = 'a';
+        char caracterReemplazoDeVacios='_';
+
+        char actualResult = test.reemplazarCaracterEnDeterminadoIndiceDeLaCadena(indice, cadenaPrueba,caracterReemplazoDeVacios);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    void reemplazarCaracterEnDeterminadoIndiceDeLaCadenaNegativo(){
+        char expectedResult = 'e';
+        char caracterReemplazoDeVacios='_';
+
+        char actualResult = test.reemplazarCaracterEnDeterminadoIndiceDeLaCadena(indice, cadenaPrueba,caracterReemplazoDeVacios);
+
+        Assertions.assertNotEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    void metodoContieneCadenaPositivo() {
+        boolean expectedResult = true;
+        String cadena1 = "Hola Mundo";
+        String cadena2 = "Hola Mundo";
+        boolean actualResult = test.metodoContieneCadena(cadena1,cadena2);
+        Assertions.assertEquals(expectedResult,actualResult);
+
+    }
+    @Test
+    void metodoContieneCadenaNegativo() {
+        boolean expectedResult = true;
+        String cadena1 = "Hola Mundo";
+        String cadena2 = "Mundo Hola";
+        boolean actualResult = test.metodoContieneCadena(cadena1,cadena2);
+        Assertions.assertNotEquals(expectedResult,actualResult);
+    }
+
+    @Test
+    void insertarCharEnCadena (){
+        char caracter = 'x';
+        String expectedResult = "Estxa es una prueba";
+        String actualResult = test.insertarCharEnCadena(cadenaPrueba, caracter,indice );
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    void insertarCharEnCadenaNegativo (){
+        char caracter = 'j';
+        String expectedResult = "Estxa es una prueba";
+        String actualResult = test.insertarCharEnCadena(cadenaPrueba, caracter,indice );
+        Assertions.assertNotEquals(expectedResult, actualResult);
+    }
 }
